@@ -1,17 +1,17 @@
 <table class="table table-user">
   <thead>
     <tr>
-      <%= image_tag @user.get_profile_image(100,100), fallback: "no_image.jpg" %>
+      <%= image_tag user.get_profile_image(100,100), fallback: "no_image.jpg" %>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Name</th>
-      <th><%= @user.name %></th>
+      <th><%= user.name %></th>
     </tr>
     <tr>
       <th>Introduction</th>
-      <th><%= @user.introduction %></th>
+      <th><%= user.introduction %></th>
     </tr>
     <tr>
       <th colspan="2">

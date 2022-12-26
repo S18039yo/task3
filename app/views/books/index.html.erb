@@ -1,11 +1,16 @@
-<div>
-  <%= flash[:notice] %>
-</div>
-
 <main>
   <div class="container px-5 px-sm-0">
     <div class="row">
       <div class="col-md-3">
+
+        <% if @book.errors.any? %>
+          <%= @book.errors.count %>error
+            <ul>
+              <% @book.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+        <% end %>
 
         <h1>User info</h1>
           <%= render 'users/user', user: @user %>
@@ -15,7 +20,7 @@
         <% end %>
 
         <h3>New book</h3>
-        <%= render 'books/book', books: @books %>
+        <%= render 'books/book', book: @book %>
       </div>
 
       <div class="col-md-8 offset-md-1">

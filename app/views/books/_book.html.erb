@@ -1,16 +1,7 @@
-<% if @book.errors.any? %>
-  <%= @book.errors.count %>error
-    <ul>
-      <% @book.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
-  <% end %>
-
-  <%= form_with model: @book do |f| %>
-    <p>Title</p>
-      <%= f.text_field :title %>
-    <p>Opinion</p>
-      <%= f.text_area :body %>
-    <%= f.submit 'Create Book', class: 'btn btn-success' %>
-  <% end %>
+<%= form_with model: book do |f| %>
+  <p>Title</p>
+    <%= f.text_field :title %>
+  <p>Opinion</p>
+    <%= f.text_area :body %>
+  <%= f.submit 'Create Book', class: 'btn btn-success' %>
+<% end %>

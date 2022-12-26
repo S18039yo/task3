@@ -22,7 +22,7 @@
         <% end %>
 
         <h3>New book</h3>
-          <%= render 'books/book', books: @books %>
+          <%= render 'books/book', book: @newbook %>
       </div>
 
       <div class="col-md-8 offset-md-1">
@@ -31,8 +31,8 @@
           <thead>
               <th>
                 <%= link_to user_path(@book.user) do %>
-                  <%= image_tag @user.get_profile_image(100,100), fallback: "no_image.jpg" %>
-  　　              <%= @book.user.name  %>
+                  <%= image_tag @user.get_profile_image(100,100), fallback: "no_image.jpg" %><br>
+                  <%= @book.user.name %>
 　　　          <% end %>
 　　　        </th>
               <th>
