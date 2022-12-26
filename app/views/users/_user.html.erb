@@ -1,7 +1,7 @@
 <table class="table table-user">
   <thead>
     <tr>
-      <%= image_tag @user.get_profile_image(100,100) %>
+      <%= image_tag @user.get_profile_image(100,100), fallback: "no_image.jpg" %>
     </tr>
   </thead>
   <tbody>

@@ -20,9 +20,7 @@
               <%=f.text_field :title %>
             <p>Opinion</p>
               <%= f.text_area :body %><br>
-            <button type="button" class="btn btn-success">
-              <%= f.submit 'Update Book' %>
-            </button>
+            <%= f.submit 'Update Book', class: 'btn btn-success' %>
           <% end %>
         <%= link_to "Show", book_path %>
         <%= link_to "Back", books_path %>

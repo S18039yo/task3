@@ -28,7 +28,7 @@
               <tr>
                 <th>
                   <%= link_to user_path(@user.id) do %>
-                    <%= image_tag @user.get_profile_image(100,100) %>
+                    <%= image_tag @user.get_profile_image(100,100), fallback: "no_image.jpg" %>
                   <% end %>
                 </th>
                 <th><%= link_to book.title, book_path(book.id) %></th>
