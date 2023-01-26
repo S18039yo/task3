@@ -27,6 +27,11 @@
                       <%= image_tag user.get_profile_image(100,100), fallback: "no_image.jpg" %>
                   </th>
                   <th><%= user.name %></th>
+                  <th>フォロー数:</th>
+                  <th><%= user.followings.count %></th>
+                  <th>フォロワー数:</th>
+                  <th><%= user.followers.count %></th>
+                  <th><%= render 'relationships/followbutan', user: user %></th>
                   <th><%= link_to "Show", user_path(user.id) %></th>
                 </tr>
               <% end %>

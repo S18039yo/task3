@@ -13,5 +13,16 @@
       <th>Introduction</th>
       <th><%= user.introduction %></th>
     </tr>
+    <tr>
+      <th>フォロー数:</th>
+      <th><%= user.followings.count %></th>
+    </tr>
+    <tr>
+      <th>フォロワー数:</th>
+      <th><%= user.followers.count %></th>
+    </tr>
+    <tr>
+      <th><%= render 'relationships/followbutan', user: user %></th>
+    </tr>
   </tbody>
 </table>
